@@ -12,5 +12,6 @@ def train_and_save_model():
         pickle.dump(model, f)
 
 def load_model():
+    train_and_save_model()
     with open("model.pkl", "rb") as f:
         return pickle.load(f)
